@@ -1,0 +1,11 @@
+{
+    "Member": {
+        "description": "Member's profile",
+        "type": "object",
+        "properties": {
+            "id": { "type": "integer" },
+            "code": { "type": "string" },
+            "name": { "type": "string" }
+        }
+    }
+}

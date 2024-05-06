@@ -1,0 +1,18 @@
+{
+    "/members": {
+        "get": {
+            "summary": "Get all registered member",
+            "tags": ["Members"],
+            "responses": {
+                "200": {
+                    "description": "Members List",
+                    "content": {
+                        "application/json": {
+                            "schemas": {"$ref": "#/components/schemas/Member"}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
