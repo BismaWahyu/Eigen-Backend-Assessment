@@ -12,3 +12,9 @@ module.exports = router;
  * tags:
  *      name: Members
  */
+
+/**
+ * @swagger
+ * tags:
+ *      name: Books
+ */

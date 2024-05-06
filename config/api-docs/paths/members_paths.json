@@ -14,5 +14,85 @@
                 }
             }
         }
+    },
+    "/member/borrow": {
+        "post": {
+            "summary": "Post data for booked book by user",
+            "tags": ["Members"],
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "description": "Request body containing data for booking a book",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "member_id": {
+                                "type": "string",
+                                "description": "ID of member who borrow the book"
+                            },
+                            "books": {
+                                "type": "array",
+                                "description": "ID of the book will be booked",
+                                "items": [
+                                    {
+                                        "type": "string",
+                                        "description": "ID of the book"
+                                    }
+                                ]
+                            },
+                            "borrowed_date": {
+                                "type": "string",
+                                "description": "Date when the book is borrowed"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Successful operation"
+                },
+                "400": {
+                    "description": "Bad request, invalid input"
+                }
+            }
+        }
+    },
+    "/member/return": {
+        "post": {
+            "summary": "Post data for returned book by user",
+            "tags": ["Members"],
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "description": "Request body containing data for booking a book",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "member_id": {
+                                "type": "string",
+                                "description": "ID of member who return the book"
+                            },
+                            "book_id": {
+                                "type": "string",
+                                "description": "ID of returned book"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Successful operation"
+                },
+                "400": {
+                    "description": "Bad request, invalid input"
+                }
+            }
+        }
     }
 }
